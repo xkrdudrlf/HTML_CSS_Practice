@@ -1,0 +1,28 @@
+@import 'config';
+@import 'utility';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.badge-container {
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid black;
+
+  .label {
+    padding: 0;
+    margin: 0;
+  }
+
+  .badge {
+    display: inline-block;
+    color: white;
+    background-color: grey;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+}
