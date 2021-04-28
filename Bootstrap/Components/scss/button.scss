@@ -1,0 +1,101 @@
+@import 'config';
+@import 'utility';
+
+// Layout
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.button-container {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+// Button
+@mixin set-btn-color($color) {
+  @extend %btn;
+  color: white;
+  border-color: $color;
+  background-color: $color;
+  &-outline {
+    @extend %btn;
+    color: $color;
+    border-color: $color;
+    background-color: white;
+    &:hover {
+      color: white;
+      background-color: $color;
+      opacity: 1;
+    }
+  }
+}
+
+%btn {
+  padding: 0.5rem 0.7rem;
+  margin: 0.5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn {
+  &-primary {
+    @include set-btn-color($primary-color);
+  }
+  &-secondary {
+    @include set-btn-color($secondary-color);
+  }
+  &-success {
+    @include set-btn-color(green);
+  }
+}
+
+// Button Group
+%btn-group {
+  display: flex;
+  button {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    border-left: none;
+    &:first-of-type {
+      border-left: 1px solid;
+      border-radius: 5px 0 0 5px;
+    }
+    &:last-of-type {
+      border-radius: 0 5px 5px 0;
+    }
+  }
+}
+
+.btn-group {
+  &-primary {
+    @extend %btn-group;
+    button {
+      @extend .btn-primary-outline;
+    }
+  }
+
+  &-secondary {
+    @extend %btn-group;
+    button {
+      @extend .btn-secondary-outline;
+    }
+  }
+
+  &-success {
+    @extend %btn-group;
+    button {
+      @extend .btn-success-outline;
+    }
+  }
+}

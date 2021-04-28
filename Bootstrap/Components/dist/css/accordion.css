@@ -46,8 +46,8 @@
 
 .accordion-item:hover .accordion-label {
   color: blue;
-  background-color: #b0e7f5;
-  box-shadow: 0 0 10px 4px #b0e7f5; }
+  background-color: #247efb;
+  box-shadow: 0 0 10px 4px #247efb; }
   .accordion-item:hover .accordion-label i {
     transform: rotate(-180deg); }
 

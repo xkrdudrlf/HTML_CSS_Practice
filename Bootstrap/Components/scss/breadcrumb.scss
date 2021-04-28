@@ -1,0 +1,29 @@
+@import 'config';
+@import 'utility';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.breadcrumb-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  // border: 1px solid black;
+  margin: 1rem 0;
+}
+
+.breadcrumb {
+  display: flex;
+  padding: 0.5rem;
+
+  li {
+    list-style: none;
+    margin-right: 0.5rem;
+  }
+  i {
+    font-size: 0.6em;
+  }
+}

@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem; }
+  .container h1 {
+    margin-bottom: 2rem; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+h2 {
+  margin-bottom: 0.5rem;
+  text-align: left; }
+
+.button-container {
+  display: flex;
+  margin-bottom: 1rem; }
+
+.btn-primary, .btn-primary-outline, .btn-group-primary button, .btn-secondary, .btn-secondary-outline, .btn-group-secondary button, .btn-success, .btn-success-outline, .btn-group-success button {
+  padding: 0.5rem 0.7rem;
+  margin: 0.5rem;
+  border: 1px solid black;
+  border-radius: 5px; }
+  .btn-primary:hover, .btn-primary-outline:hover, .btn-group-primary button:hover, .btn-secondary:hover, .btn-secondary-outline:hover, .btn-group-secondary button:hover, .btn-success:hover, .btn-success-outline:hover, .btn-group-success button:hover {
+    opacity: 0.8; }
+
+.btn-primary {
+  color: white;
+  border-color: #247efb;
+  background-color: #247efb; }
+  .btn-primary-outline, .btn-group-primary button {
+    color: #247efb;
+    border-color: #247efb;
+    background-color: white; }
+    .btn-primary-outline:hover, .btn-group-primary button:hover {
+      color: white;
+      background-color: #247efb;
+      opacity: 1; }
+
+.btn-secondary {
+  color: white;
+  border-color: #5c636a;
+  background-color: #5c636a; }
+  .btn-secondary-outline, .btn-group-secondary button {
+    color: #5c636a;
+    border-color: #5c636a;
+    background-color: white; }
+    .btn-secondary-outline:hover, .btn-group-secondary button:hover {
+      color: white;
+      background-color: #5c636a;
+      opacity: 1; }
+
+.btn-success {
+  color: white;
+  border-color: green;
+  background-color: green; }
+  .btn-success-outline, .btn-group-success button {
+    color: green;
+    border-color: green;
+    background-color: white; }
+    .btn-success-outline:hover, .btn-group-success button:hover {
+      color: white;
+      background-color: green;
+      opacity: 1; }
+
+.btn-group-primary, .btn-group-secondary, .btn-group-success {
+  display: flex; }
+  .btn-group-primary button, .btn-group-secondary button, .btn-group-success button {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    border-left: none; }
+    .btn-group-primary button:first-of-type, .btn-group-secondary button:first-of-type, .btn-group-success button:first-of-type {
+      border-left: 1px solid;
+      border-radius: 5px 0 0 5px; }
+    .btn-group-primary button:last-of-type, .btn-group-secondary button:last-of-type, .btn-group-success button:last-of-type {
+      border-radius: 0 5px 5px 0; }
