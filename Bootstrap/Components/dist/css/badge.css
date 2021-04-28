@@ -19,13 +19,24 @@
   width: 100%;
   padding: 2rem;
   border: 1px solid black; }
-  .badge-container .label {
-    padding: 0;
-    margin: 0; }
+  .badge-container h1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; }
   .badge-container .badge {
     display: inline-block;
     color: white;
     background-color: grey;
-    font-size: 1rem;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
     padding: 0.5rem;
     border-radius: 10px; }
+  .badge-container .green {
+    background: lightgreen;
+    color: #575757; }
+  .badge-container .blue {
+    background: lightblue;
+    color: #575757; }
+  .badge-container .pink {
+    background: pink;
+    color: #575757; }
