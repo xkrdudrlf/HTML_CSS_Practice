@@ -1,0 +1,122 @@
+@import 'config';
+@import 'utility';
+@import 'button';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 2rem;
+}
+
+// Button
+.btn {
+  cursor: pointer;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+
+  &-primary:focus {
+    box-shadow: 0 0 5px 2px $primary-color;
+  }
+
+  &-secondary:focus {
+    box-shadow: 0 0 5px 2px $secondary-color;
+  }
+}
+
+// Dropdown
+.dropdown {
+  &-menu {
+    display: none;
+    list-style: none;
+    margin-top: 0.2rem;
+    padding: 0.2rem 0;
+    border: 1px solid $light-color;
+    border-radius: 2px;
+  }
+
+  &-item {
+    padding: 0.5rem 0.8rem;
+    font-size: 1.2rem;
+
+    &:hover {
+      background-color: lightgrey;
+    }
+  }
+}
+
+// Close icon
+.close-icon {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  div {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    height: 30px;
+    width: 3px;
+    border-radius: 10px;
+    background-color: $light-color;
+    &:first-child {
+      transform: rotate(45deg);
+    }
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// Modal
+.modal-container {
+  display: none;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 35vh;
+  left: 30vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  border: 1px solid $light-color;
+  border-radius: 5px;
+  font-size: 1.3rem;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $light-color;
+    padding: 1rem;
+    font-size: 1.3em;
+  }
+
+  &-body {
+    min-height: 100px;
+    padding: 1rem;
+    border-bottom: 1px solid $light-color;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+}
