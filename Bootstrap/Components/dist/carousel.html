@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/carousel.css" />
+    <title>Carousel</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Carousel Practice</h1>
+      <div class="carousel-3">
+        <i id="leftArrow1" class="fas fa-chevron-left"></i>
+        <div class="slide">First Slide</div>
+        <div class="slide">Second Slide</div>
+        <div class="slide">Third Slide</div>
+        <i id="rightArrow1" class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+
+    <script>
+      const rightBtn = document.querySelector('#rightArrow1');
+      const leftBtn = document.querySelector('#leftArrow1');
+      const [s1, s2, s3] = document.getElementsByClassName('slide');
+      let leftCnt = 2;
+      let rightCnt = 0;
+
+      rightBtn.addEventListener('click', () => {
+        if (rightCnt === 0 || rightCnt === 1) {
+          s1.style.left = `${-100 * (rightCnt + 1)}%`;
+          s2.style.left = `${-100 * rightCnt}%`;
+          s3.style.left = `${-100 * (rightCnt - 1)}%`;
+          rightCnt++;
+          leftCnt--;
+        }
+      });
+
+      leftBtn.addEventListener('click', () => {
+        if (leftCnt === 0 || leftCnt === 1) {
+          s1.style.left = `${-200 + 100 * (leftCnt + 1)}%`;
+          s2.style.left = `${-100 + 100 * (leftCnt + 1)}%`;
+          s3.style.left = `${0 + 100 * (leftCnt + 1)}%`;
+          leftCnt++;
+          rightCnt--;
+        }
+      });
+    </script>
+  </body>
+</html>

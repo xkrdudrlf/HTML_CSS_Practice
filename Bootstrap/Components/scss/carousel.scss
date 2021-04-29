@@ -1,0 +1,46 @@
+@import 'config';
+@import 'utility';
+
+@mixin carousel-n($n) {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 300px;
+  width: 500px;
+  overflow: hidden;
+  background-color: $light-color;
+
+  .fa-chevron-left,
+  .fa-chevron-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 4%;
+    background: transparent;
+    z-index: 1;
+    cursor: pointer;
+    color: white;
+  }
+
+  @for $i from 1 through $n {
+    .slide:nth-of-type(#{$i}) {
+      position: absolute;
+      top: 0;
+      left: (100% * ($i - 1));
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: map-get($bg-imgs, 'img#{$i}') no-repeat center center/cover;
+      transition: all 1.5s ease-in-out;
+    }
+  }
+}
+
+.carousel {
+  &-3 {
+    @include carousel-n(3);
+  }
+}
